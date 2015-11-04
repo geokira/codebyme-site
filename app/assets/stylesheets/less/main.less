@@ -1,0 +1,72 @@
+@startup-basePath: "../../startup-framework/";
+@import '@{startup-basePath}flat-ui/less/variables.less';
+@import '@{startup-basePath}flat-ui/less/mixins.less';
+@import '@{startup-basePath}common-files/less/mixins.less';
+@import '@{startup-basePath}common-files/less/common.less';
+@import '@{startup-basePath}common-files/less/navbar.less';
+@import '@{startup-basePath}common-files/less/helper.less';
+
+@import '@{startup-basePath}ui-kit/ui-kit-header/less/header-20.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-5.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-4.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-12.less';
+@import '@{startup-basePath}ui-kit/ui-kit-contacts/less/contact-1.less';
+@import '@{startup-basePath}ui-kit/ui-kit-footer/less/footer-12.less';
+@import '@{startup-basePath}ui-kit/ui-kit-footer/less/footer-2.less';
+
+
+.header-20-sub {
+    .img{
+        img[src*="/coding-projects-for-kids-with-blockly-app-wonder-workshop_zpsxzwnjuso"] {
+            position: absolute;
+            width: 80%;
+            bottom: 0;
+            left: 0;
+        }
+        img[src*="/rocket-blue"] {
+            position: absolute;
+            width: 48%;
+            top: 0;
+            right: 0;
+        }
+        &:hover {
+            img[src*="/coding-projects-for-kids-with-blockly-app-wonder-workshop_zpsxzwnjuso"] {
+                bottom: 15%;
+                left: 20%;
+            }
+            img[src*="/rocket-blue"] {
+                top: 12%;
+                right: 52%;
+            }
+    }
+    }
+}
+
+.header-20 {
+    background-color: darken(white, 5%);
+    .navbar .nav > li.active > a {
+            color: @brand-secondary;
+            }
+    .navbar .nav > li:hover > a {
+        color: @brand-secondary;
+    }
+}
+
+.content-5 {
+    background-color: darken(white,5%);
+}
+
+.contacts-1 {
+    background-color: darken(white, 5%);
+}
+
+.btn-info {
+    background-color: @brand-secondary;
+}
+
+.singleton {
+    text-align: center;
+    img {
+        height: 750px;
+    }
+}

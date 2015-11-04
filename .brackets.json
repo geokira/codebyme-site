@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/geo/Sites/codebyme-site/vendor/bundle/gems/less-2.6.0/lib/less/js/lib/less/to-css-visitor.js",
+        "/Users/geo/Sites/codebyme-site/app/assets/startup-framework/flat-ui/js/typeahead.js",
+        "/Users/geo/Sites/codebyme-site/app/assets/javascripts/application.js"
+    ]
+}
