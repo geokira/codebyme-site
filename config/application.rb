@@ -29,5 +29,6 @@ module CodebymeSite
     config.assets.paths << Rails.root.join("app/assets/startup-framework/common-files/css/")
     config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/bootstrap/css/")
     config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/css/")
+    config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/fonts/")
   end
 end
