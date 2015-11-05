@@ -22,7 +22,12 @@ module CodebymeSite
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-      
-      config.assets.paths << Rails.root.join("app", "assets", "startup-framework")
+
+    config.assets.paths << Rails.root.join("app", "assets", "startup-framework")
+    config.assets.paths << Rails.root.join("app/assets/startup-framework/common-files/javascripts/")
+    config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/js/")
+    config.assets.paths << Rails.root.join("app/assets/startup-framework/common-files/css/")
+    config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/bootstrap/css/")
+    config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/css/")
   end
 end
