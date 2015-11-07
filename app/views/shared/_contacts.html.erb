@@ -1,0 +1,41 @@
+<section class="contacts-1">
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <h3>We love what we do. <br> This is features of our products</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <%= form_tag do %>
+                <%= label(:lead, :name, "Name / Last Name", class: "h6") %>
+                <%= text_field(:lead, :name ,class: "form-control") %>
+                <%= label(:lead, :email, "E-mail", class:"h6") %>
+                <%= email_field(:lead,:email, class: "form-control") %>
+                <%= label(:lead, :phone, "Phone", class:"h6") %>
+                <%= telephone_field(:lead,:phone, class: "form-control") %>
+                <%= label(:lead, :message, "Message", class:"h6") %>
+                <%= text_area(:lead, :message, rows: 7, class:"form-control") %>
+                <%= button_tag(type: 'submit',class: "btn btn-primary") do %>
+                    <span class="fui-mail"></span>
+                <% end %>
+            <% end %>
+        </div>
+        
+        <div class="col-sm-4 col-sm-offset-1">
+            <div class="additional">
+                <h6>Need Help?</h6>
+                <p>Don’t hestiate to ask us something. Email us directly <a href="#">info@designmodo.com</a> or call us at <b>1-347-567-8670</b>. You can checkout our <a href="#">FAQ</a> and <a href="#">Help</a> page to get more information about our products.</p>
+            </div>
+            <div class="additional">
+                <h6>FAQ</h6>
+                <p>As a Harvard professor, he was one of the first to explore the relationship between chemical equilibrium and the reaction rate of chemical processes.</p>
+            </div>
+            <div class="phone">
+                <big>347 567 78 90</big>
+                AVAILABLE AT 12PM - 18PM
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
