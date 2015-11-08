@@ -5,4 +5,7 @@ class WelcomeController < ApplicationController
     
     def schools
     end
+    
+    def teachers
+    end
 end
