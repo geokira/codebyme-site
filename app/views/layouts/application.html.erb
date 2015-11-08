@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><%= yield(:title) %> | Providing a Fun Learning environment for Young Coders and Creators in Orlando, FL</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
@@ -22,10 +22,10 @@
                         </div>
                         <div class="navbar-collapse collapse pull-right">
                             <ul class="nav">
-                                <li class="active"><a href="<%= root_path %>">Home</a></li>
-                                <li><a href="<%= welcome_schools_path %>">For Schools</a></li>
-                                <li><a href="#">For Teachers</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li class="active"><%= link_to("Home", root_path) %></li>
+                                <li><%= link_to("For Schools", welcome_schools_path) %></li>
+                                <li><%= link_to("For Teachers", welcome_teachers_path) %></li>
+                                <li><%= link_to("Contact", "#") %></li>
                             </ul>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                 <nav class="pull-left">
                     <ul>
                         <li class="active"><a href="#">Take me Up</a></li>
-                        <li><a href="#">Company</a></li>
+                        <li><%= link_to("Home", root_path) %></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
