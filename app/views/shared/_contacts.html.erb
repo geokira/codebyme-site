@@ -3,13 +3,14 @@
     <div class="row">
         <div class="col-sm-8">
             <h3>We love what we do. <br> This is features of our products</h3>
+            <%= render 'shared/error_messages' %>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <%= form_tag do %>
-                <%= label(:lead, :name, "Name / Last Name", class: "h6") %>
-                <%= text_field(:lead, :name ,class: "form-control") %>
+            <%= form_for(@lead) do |f| %>
+            <%= f.label :label, "Name / Last Name", class: "h6" %>
+            <%= f.text_field :name, class:"form-control" %>
                 <%= label(:lead, :email, "E-mail", class:"h6") %>
                 <%= email_field(:lead,:email, class: "form-control") %>
                 <%= label(:lead, :phone, "Phone", class:"h6") %>

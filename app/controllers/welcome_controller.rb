@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
     def index
-       
+        @lead = Lead.new
     end
     
     def schools

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'leads/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
 
     get 'welcome/schools'
     get 'welcome/teachers'
+    
+    resources :leads, only: [:create]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
