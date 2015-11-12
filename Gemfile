@@ -16,6 +16,7 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'rest-client'
 gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
+gem 'active_link_to'
 
 
 # Use jquery as the JavaScript library

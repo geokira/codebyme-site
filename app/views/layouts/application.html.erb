@@ -17,15 +17,14 @@
                     <div class="navbar col-sm-12" role="navigation">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle"></button>
-                            <a class="brand" href="#">
-                                <img src="<%= asset_path("20151010 - codebyme logo.png") %>" width="270" height="132" alt="Code by Me"></a>
+                            <%= link_to(image_tag(asset_path("20151010 - codebyme logo.png"), size: "270x132", alt: "Code by Me"), root_path, class: "brand") %>
                         </div>
                         <div class="navbar-collapse collapse pull-right">
                             <ul class="nav">
-                                <li class="active"><%= link_to("Home", root_path) %></li>
-                                <li><%= link_to("For Schools", welcome_schools_path) %></li>
-                                <li><%= link_to("For Teachers", welcome_teachers_path) %></li>
-                                <li><%= link_to("Contact", "#") %></li>
+                              <%= active_link_to 'Home', root_path, :active => :exclusive, :wrap_tag => :li %>
+                              <%= active_link_to 'For Schools', welcome_schools_path, :wrap_tag => :li %>
+                              <%= active_link_to 'For Teachers', welcome_teachers_path, :wrap_tag => :li %>
+                              <%= active_link_to 'Contact Us', root_path + "#contactus", :active => :false, :wrap_tag => :li %>
                             </ul>
                         </div>
                     </div>
@@ -33,7 +32,7 @@
             </div>
             <div class="header-background"></div>
         </header>
-    
+
     <div class="container">
         <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
@@ -41,7 +40,7 @@
     </div>
 
     <%= yield %>
-    
+
         <footer class="footer-12" id="section4">
             <div class="container">
             Made with <span class="fui-heart"> </span> in Orlando, Florida
@@ -80,7 +79,7 @@
         </footer>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    
+
     <%= debug(params) if Rails.env.development? %>
 </body>
 </html>
