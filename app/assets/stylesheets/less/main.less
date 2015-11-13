@@ -14,29 +14,31 @@
 @import '@{startup-basePath}ui-kit/ui-kit-footer/less/footer-12.less';
 @import '@{startup-basePath}ui-kit/ui-kit-footer/less/footer-2.less';
 
+@top-left-image: asset-path("computer-ox.png");
+@bottom-right-image: asset-path("boy-on-chair.png");
 
 .header-20-sub {
     .img{
-        img[src*="/coding-projects-for-kids-with-blockly-app-wonder-workshop_zpsxzwnjuso"] {
+      img[src*=@{top-left-image}] {
             position: absolute;
             width: 80%;
-            bottom: 0;
+            top: 0;
             left: 0;
         }
-        img[src*="/rocket-blue"] {
+        img[src*=@{bottom-right-image}] {
             position: absolute;
             width: 48%;
-            top: 0;
+            bottom: 0;
             right: 0;
         }
         &:hover {
-            img[src*="/coding-projects-for-kids-with-blockly-app-wonder-workshop_zpsxzwnjuso"] {
-                bottom: 15%;
-                left: 20%;
+            img[src*=@{bottom-right-image}] {
+                bottom:5%;
+                right:25%;
             }
-            img[src*="/rocket-blue"] {
+            img[src*=@{top-left-image}] {
                 top: 12%;
-                right: 52%;
+                left: 10%;
             }
     }
     }
@@ -66,4 +68,10 @@
 
 .btn-info {
     background-color: @brand-secondary;
+}
+
+.header-20-sub .img-wrapper > img
+{
+  width: 60%;
+  top: -20%;
 }

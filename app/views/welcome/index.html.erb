@@ -5,18 +5,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-sm-offset-2 pull-right">
-                    <div class="img-wrapper">
-                        <img src="<%= asset_path("computer-ox.png") %>" width="334" height="324" alt="">
-                        <div class="visible-xs">
-                            <img src="<%= asset_path("boy-on-chair.png") %>" width="300" height="300" alt="">
-                        </div>
-                        <div class="img hidden-xs">
-                            <!-- TODO: Try to understand why this first image is required for HTML to show up in the header -->
-                            <img src="<%= asset_path("boy-on-chair-with-computer-ox.png") %>" width="300" height="300" alt="">
-                            <img src="<%= asset_path("robot-in-a-wheel.png") %>" width="240" height="255"  alt="2 Robots">
-                            <img src="<%= asset_path("boy-on-chair.png") %>" width="144" height="264"   alt="Kid with blocks coding">
-                        </div>
+                  <div class="img-wrapper">
+                    <%= image_tag("robot-in-a-wheel.png", alt:"robot in a wheel") %>
+                    <div class="visible-xs">
+                      <%= image_tag("boy-on-chair-with-computer-ox.png", alt:"boy on computer") %>
                     </div>
+                    <div class="img hidden-xs">
+                      <%= image_tag("boy-on-chair-with-computer-ox.png", alt:"boy on computer") %>
+                      <%= image_tag("computer-ox.png", size:"250x250", alt:"computer desk") %>
+                      <%= image_tag("boy-on-chair.png", alt:"boy on chair") %>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-sm-4 col-sm-offset-1">
                     <h2>Your kids will build the future</h2>
