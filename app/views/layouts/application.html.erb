@@ -17,14 +17,11 @@
                     <div class="navbar col-sm-12" role="navigation">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle"></button>
-                            <%= link_to(image_tag(asset_path("20151010 - codebyme logo.png"), size: "270x132", alt: "Code by Me"), root_path, class: "brand") %>
+                            <%= link_to(image_tag(asset_path("20151010 - codebyme logo.png"), size: "230x132", alt: "Code by Me"), root_path, class: "brand") %>
                         </div>
                         <div class="navbar-collapse collapse pull-right">
                             <ul class="nav">
-                              <%= active_link_to 'Home', root_path, :active => :exclusive, :wrap_tag => :li %>
-                              <%= active_link_to 'For Schools', welcome_schools_path, :wrap_tag => :li %>
-                              <%= active_link_to 'For Teachers', welcome_teachers_path, :wrap_tag => :li %>
-                              <%= active_link_to 'Contact Us', root_path + "#contactus", :active => :false, :wrap_tag => :li %>
+                              <%= render "shared/nav_links" %>
                             </ul>
                         </div>
                     </div>
@@ -51,11 +48,8 @@
             <div class="container">
                 <nav class="pull-left">
                     <ul>
-                        <li class="active"><a href="#">Take me Up</a></li>
-                        <li><%= link_to("Home", root_path) %></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li class="active"><a href="#top">Take me Up</a></li>
+                        <%= render "shared/nav_links" %>
                     </ul>
                 </nav>
                 <div class="social-btns pull-right">
@@ -71,9 +65,6 @@
                         <div class="fui-twitter"></div>
                         <div class="fui-twitter"></div>
                     </a>
-                </div>
-                <div class="additional-links">
-                    Be sure to take a look at our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
                 </div>
             </div>
         </footer>
