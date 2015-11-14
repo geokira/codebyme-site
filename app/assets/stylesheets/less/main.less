@@ -14,6 +14,11 @@
 @import '@{startup-basePath}ui-kit/ui-kit-footer/less/footer-12.less';
 @import '@{startup-basePath}ui-kit/ui-kit-footer/less/footer-2.less';
 
+/** The two imports below work for the school section **/
+@import '@{startup-basePath}ui-kit/ui-kit-header/less/header-4.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-25.less';
+
+
 @top-left-image: asset-path("computer-ox.png");
 @bottom-right-image: asset-path("boy-on-chair.png");
 
@@ -56,6 +61,10 @@
     .navbar .nav > li:hover > a {
         color: @brand-secondary;
     }
+    .navbar {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 }
 
 .content-5 {
@@ -74,4 +83,18 @@
 {
   width: 60%;
   top: -20%;
+}
+
+.header-4 .background.schools{
+    background-image: asset-url("kids-having-fun-coding.jpg");
+    opacity: .6;
+}
+
+.header-4 .background.teachers{
+    background-image: asset-url("kid-on-right-smiling.jpg");
+    opacity: .6;
+}
+
+.header-4 .float-right{
+    float: right;
 }
