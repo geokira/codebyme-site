@@ -39,8 +39,9 @@
     <%= yield %>
 
         <footer class="footer-12" id="section4">
-            <div class="container">
-            Made with <span class="fui-heart"> </span> in Orlando, Florida
+            <div class="container">Start creating with CodebyMe.com</div>
+            <div class="additional">
+            With <span class="fui-heart"> </span> from Orlando, Florida
             </div>
         </footer>
 
@@ -53,18 +54,7 @@
                     </ul>
                 </nav>
                 <div class="social-btns pull-right">
-                    <a href="#">
-                        <div class="fui-vimeo"></div>
-                        <div class="fui-vimeo"></div>
-                    </a>
-                    <a href="#">
-                        <div class="fui-facebook"></div>
-                        <div class="fui-facebook"></div>
-                    </a>
-                    <a href="#">
-                        <div class="fui-twitter"></div>
-                        <div class="fui-twitter"></div>
-                    </a>
+                    <%= render "shared/social_links" %>
                 </div>
             </div>
         </footer>

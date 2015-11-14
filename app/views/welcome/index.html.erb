@@ -20,15 +20,15 @@
                 <div class="col-sm-4 col-sm-offset-1">
                     <h2>Your kids will build the future</h2>
                     <p>We give them the exposure and skills to help them.</p>
-                    <a class="btn btn-info" href="#HowWeDoIt">Learn How =></a>
+                    <a class="btn btn-info" href="#How">Learn How =></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="content-5" id="section1">
+    <section class="content-5" id="How">
         <div class="container">
-            <img src="<%= asset_path("common-files/icons/magic-wand@2x.png") %>" width="200" height="200" alt="">
+            <%= image_tag("links-icon.png", size:"200", alt:"Links to our Mission") %>
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <h3>How we create creators?</h3>
@@ -63,7 +63,7 @@
     </section>
 
     <section class="content-12" id="section2">
-        <a class="wide btn-wide" href="#"><b>Find a center near You</b></a>
+        <%= link_to(content_tag(:b,"Find a center near You"), "#", class: "wide btn-wide") %>
     </section>
 
     <section class="content-4" id="section3">
