@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
     get 'welcome/schools'
     get 'welcome/teachers'
+    get 'welcome/faq'
     
     resources :leads, only: [:create]
   # Example of regular route:
