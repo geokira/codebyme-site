@@ -15,7 +15,9 @@ gem 'less-rails', '~> 2.7.0'
 gem 'therubyracer', platforms: :ruby
 
 gem 'rest-client'
-gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
+
+gem 'mailgun_rails'
+#gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
 gem 'active_link_to'
 
 

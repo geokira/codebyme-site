@@ -1,11 +1,12 @@
 class LeadsController < ApplicationController
+    
     def create
         @lead = Lead.new(lead_params)
         
         if @lead.save
             # Handle goos save.
             flash[:success] = "Thanks for your message. \n We will get back with you as soon as possible."
-            lead_email
+            lead_email(@lead)
             redirect_to root_path
         else
             # Problem with saving.
@@ -14,29 +15,20 @@ class LeadsController < ApplicationController
         end
     end
     
-    
     private
     
     def lead_params
         params.require(:lead).permit(:name, :email, :phone, :message)
     end
     
-    def lead_email
+    def lead_email(lead)
         if params[:lead][:email].blank?
             #what to do if email is blank
         else
             #what to do if email is present
-            send_simple_message(params[:lead][:email])
+            LeadMailer.welcome_to_new_lead_email(lead).deliver_now!
+            LeadMailer.notify_about_new_lead(lead).deliver_now!
         end 
     end
     
-    def send_simple_message (recipient = "")
-        mg_client = Mailgun::Client.new MAILGUN_API_KEY
-        message_params = {:from => 'Dorian @ Code by Me <dmiranda@codebyme.com>',
-            :to => recipient,
-            :subject => 'Trying out the SDK for Ruby',
-            :text => 'This is an api call result Checkout our locations section',
-            :html => "<html><body>this is an api call result Checkout our <a href=\"http://www.google.com\"> locations </a></body></html>"}
-        mg_client.send_message "mg.codebyme.com", message_params
-    end
 end
