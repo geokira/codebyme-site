@@ -10,7 +10,8 @@
                         <p>Offer our Code Curriculum at your Schools.</p>
                     </div>
                     <div class="btns">
-                        <a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/1mMmmsGwPyovIZLOkodVp2ckcHJ-2NP_KZTWcB-goQTQ/viewform?usp=send_form">Join Code by Me</a>
+                      <%= link_to("Join Code by Me","https://docs.google.com/forms/d/1mMmmsGwPyovIZLOkodVp2ckcHJ-2NP_KZTWcB-goQTQ/viewform?usp=send_form", class: "btn btn-large btn-primary", target: "_blank") %>
+
                         <a class="btn btn-large btn-gray" href="<%= root_path %>">Explore Us as Parents</a>
                     </div>
                 </div>
@@ -24,14 +25,14 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <h3>Imagine that every school, including yours, will produce Creators</h3>
+                <h3>Every School producing Creators</h3>
                 <p>
                     In partnership with the best technology minds in the market your school will start converting consumers into creators. Kids that already attend your school that enjoy the use of technology or are curious about it, could become creators with our classes. We focus on problem solving, critical thinkin and perseverance through the learning of computer coding.
                 </p>
                 <p>
                     Our classes start simple, but quickly students are able to do their own interactive games, post-cards, or even websites.
                 </p>
-              <a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/1mMmmsGwPyovIZLOkodVp2ckcHJ-2NP_KZTWcB-goQTQ/viewform?usp=send_form">Request more Information</a>
+              <%= link_to("Request more Information","https://docs.google.com/forms/d/1mMmmsGwPyovIZLOkodVp2ckcHJ-2NP_KZTWcB-goQTQ/viewform?usp=send_form", class: "btn btn-large btn-primary", target: "_blank") %>
             </div>
             <div class="col-sm-6" style="opacity: 0;">
                 <img class="pull-right nosvg" src="<%= asset_path('common-files/icons/rocket-big@2x.png') %>" alt="Rocket" width="402" height="401">
@@ -74,17 +75,15 @@
 <section class="content-2">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <h3>Multi useful components</h3>
-                <p>All of these components are made in the same style, and can easily be integrated into
-                    projects, allowing you to create hundreds of solutions for your future projects.
+            <div class="col-sm-5 col-sm-offset-1">
+                <h3>The Benefits to your School</h3>
+                <p>Our courses help even the youngest students to try computer science. This classes are design to challenge the mind and let them try things from another perspective. Partner with us to bring computer science to your school. 
                 </p>
                 <div class="btns">
-                    <a class="btn btn-primary" href="#"><span class="fui-apple"> </span>Buy in Appstore</a>
-                    <a href="#"><b>Learn More</b></a>
+                   <%= link_to("Request more Information","https://docs.google.com/forms/d/1mMmmsGwPyovIZLOkodVp2ckcHJ-2NP_KZTWcB-goQTQ/viewform?usp=send_form", class: "btn btn-large btn-primary", target: "_blank") %>
                 </div>
             </div>
-            <div class="col-sm-5 col-sm-offset-1">
+            <div class="col-sm-6">
                 <h3>What most schools don't teach</h3>
                 <div class="player embed-responsive embed-responsive-16by9">
                   <iframe id="pPlayer" width="374" height="210" src="https://www.youtube.com/embed/nKIu9yen5nc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
