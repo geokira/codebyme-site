@@ -11,6 +11,7 @@
 
 </head>
 <body>
+  <%= render "layouts/analyticstracking" %>
         <header class="header-20" id="top">
             <div class="container">
                 <div class="row">
@@ -29,12 +30,12 @@
             </div>
             <div class="header-background"></div>
         </header>
-    
+
     <% flash.each do |message_type, message| %>
     <div class="container">
         <div class="alert alert-<%= message_type %>"><%= message %></div>
     </div>
-    <% end %> 
+    <% end %>
 
     <%= yield %>
 

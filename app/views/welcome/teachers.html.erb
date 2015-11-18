@@ -11,8 +11,8 @@
                         <p>Help build a better world by equiping our young with the right skills for the future.</p>
                     </div>
                     <div class="btns">
-                        <a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/1yH8ZaubCwfk3eusxj7kt36C2kI09k8Yzxn-dsSSAEpc/viewform">Join Code by Me</a>
-                        <a class="btn btn-large btn-gray" href="<%= root_path %>">Explore Us as Parents</a>
+                      <%= link_to("Apply Today","https://docs.google.com/forms/d/1yH8ZaubCwfk3eusxj7kt36C2kI09k8Yzxn-dsSSAEpc/viewform", class: "btn btn-large btn-primary", target: "_blank") %>
+                      <a class="btn btn-large btn-gray" href="<%= root_path %>">Explore Us as Parents</a>
                     </div>
                 </div>
             </div>
@@ -20,23 +20,25 @@
     </div>
 </header>
 
-
 <section class="content-2">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <h3>Multi useful components</h3>
-                <div class="player">
-                  <iframe id="iframe1" width="374" height="210" src="https://www.youtube.com/embed/nKIu9yen5nc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <h3>All Depends on Technology</h3>
+                <div class="player embed-responsive embed-responsive-16by9">
+                 <iframe width="853" height="480" src="https://www.youtube.com/embed/qYZF6oIZtfc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-sm-5 col-sm-offset-1">
-                <h3>What most schools don't teach</h3>
-                <div class="player">
-                  <iframe id="iframe1" width="374" height="210" src="https://www.youtube.com/embed/nKIu9yen5nc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-<!--                     <div id="iframe1play" class="btn btn-primary btn-play fui-play"><a href="#" onclick="iframe1play();return false;"></a></div> -->
+
+                      <div class="col-sm-5 col-sm-offset-1">
+                <h3>Inspire others with your Creations</h3>
+                <p>We gives teacher the opportunity to inspire and motivate others to become creators. All our teachers are trained in technlogy and education.
+                </p>
+                <div class="btns">
+                  <%= link_to("Apply Today","https://docs.google.com/forms/d/1yH8ZaubCwfk3eusxj7kt36C2kI09k8Yzxn-dsSSAEpc/viewform", class: "btn btn-large btn-primary", target: "_blank") %>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
