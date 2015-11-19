@@ -75,12 +75,27 @@
   .background.teachers{
     background-image: asset-url("kid-on-right-smiling.jpg");
     opacity: .6;
+    .main-image-resize-media();
   }
   .background.schools{
     background-image: asset-url("kids-having-fun-coding.jpg");
     opacity: .6;
+    .main-image-resize-media();
+  }
+
+}
+
+
+.main-image-resize-media() {
+@media (max-width: 768px) {
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-position: 80%;
   }
 }
+
 .header-4 .float-right{
     float: right;
 }
