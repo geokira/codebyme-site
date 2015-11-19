@@ -12,6 +12,12 @@ Rails.application.routes.draw do
     get 'welcome/faq'
     
     resources :leads, only: [:create]
+    
+  #Twilio 
+  get 'twilio/index'
+  post 'call' => 'twilio#call'
+  post 'connect' => 'twilio#connect'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
