@@ -26,35 +26,6 @@
 @import '@{startup-basePath}ui-kit/ui-kit-content/less/content-2.less';
 
 
-@top-left-image: asset-path("computer-ox.png");
-@bottom-right-image: asset-path("boy-on-chair.png");
-
-.header-20-sub {
-    .img{
-      img[src*=@{top-left-image}] {
-            position: absolute;
-            width: 80%;
-            top: 0;
-            left: 0;
-        }
-        img[src*=@{bottom-right-image}] {
-            position: absolute;
-            width: 48%;
-            bottom: 0;
-            right: 0;
-        }
-        &:hover {
-            img[src*=@{bottom-right-image}] {
-                bottom:5%;
-                right:25%;
-            }
-            img[src*=@{top-left-image}] {
-                top: 12%;
-                left: 10%;
-            }
-    }
-    }
-}
 
 .header-20 {
     background-color: darken(white, 5%);
@@ -92,16 +63,24 @@
   top: -20%;
 }
 
-.header-4 .background.schools{
-    background-image: asset-url("kids-having-fun-coding.jpg");
+.header-4 {
+  &#parents {
+    padding-bottom:200px;
+    padding-top:200px;
+  }
+  .background.parents{
+    background-image: asset-url("child-coding.jpg");
     opacity: .6;
-}
-
-.header-4 .background.teachers{
+  }
+  .background.teachers{
     background-image: asset-url("kid-on-right-smiling.jpg");
     opacity: .6;
+  }
+  .background.schools{
+    background-image: asset-url("kids-having-fun-coding.jpg");
+    opacity: .6;
+  }
 }
-
 .header-4 .float-right{
     float: right;
 }
@@ -113,4 +92,8 @@
   .carousel {
     marging-bottom: 30px;
   }
+}
+
+.footer-12 {
+  letter-spacing: initial;
 }
