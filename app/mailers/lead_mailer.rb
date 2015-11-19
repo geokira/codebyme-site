@@ -10,7 +10,7 @@ class LeadMailer < ApplicationMailer
         message[:to] = @lead.email
         message[:subject] = "Code by Me say Thank You!"
         email = mail(message)
-        email.mailgun_headers = {"Reply-To": 'info@codebyme.com'}
+        email.mailgun_headers = {'Reply-To': 'info@codebyme.com'}
     end
 
     def notify_about_new_lead(lead)
