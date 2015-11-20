@@ -1,6 +1,7 @@
 require 'twilio-ruby'
 
 class TwilioController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   # Before we allow the incoming request to connect, verify
   # that it is a Twilio request
   before_filter :authenticate_twilio_request, :only => [ :connect ]
@@ -9,7 +10,7 @@ class TwilioController < ApplicationController
   @@twilio_sid = ENV['TWILIO_ACCOUNT_SID']
   @@twilio_token = ENV['TWILIO_AUTH_TOKEN']
   @@twilio_number = ENV['TWILIO_NUMBER']
-  
+
   # Render home page
   def index
   	render 'index'
@@ -28,7 +29,7 @@ class TwilioController < ApplicationController
       @call = @client.calls.create(
         :from => @@twilio_number,
         :to => contact.phone,
-        :url => connect_url # Fetch instructions from this URL when the call connects
+        :url => "#{root_url}connect" # Fetch instructions from this URL when the call connects
       )
 
       # Lets respond to the ajax call with some positive reinforcement
@@ -52,7 +53,8 @@ class TwilioController < ApplicationController
     # format. Our Ruby library provides a helper for generating one
     # of these documents
     response = Twilio::TwiML::Response.new do |r|
-      r.Say 'If this were a real click to call implementation, you would be connected to an agent at this point.', :voice => 'alice'
+      #r.Say 'If this were a real click to call implementation, you would be connected to an agent at this point.', :voice => 'alice'
+      r.Dial "+17872420390"
     end
     render text: response.text
   end

@@ -1,12 +1,12 @@
 // Execute JavaScript on page load
-$(function() {
-    $('#phoneNumber').intlTelInput({
-        responsiveDropdown: true,
-        autoFormat: true,
-        utilsScript: 'assets/intl-phone/libphonenumber/build/utils.js'
-    });
-    var $form = $('#contactform'),
-        $submit = $('#contactform input[type=submit]');
+// $(function() {
+//     $('#phoneNumber').intlTelInput({
+//         responsiveDropdown: true,
+//         autoFormat: true,
+//         utilsScript: 'assets/intl-phone/libphonenumber/build/utils.js'
+//     });
+     var $form = $('#contactform'),
+         $submit = $('#contactform input[type=submit]');
 
     // Intercept form submission
     $form.on('submit', function(e) {
@@ -28,4 +28,3 @@ $(function() {
         });
 
     });
-});
