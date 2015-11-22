@@ -29,6 +29,7 @@
 
 .header-20 {
     background-color: darken(white, 5%);
+    z-index: 100;
 
     .navbar .brand {
       padding: 23px 2px 20px 0;
@@ -64,6 +65,9 @@
 }
 
 .header-4 {
+    margin-top:100px;
+    z-index:90;
+
   &#parents {
     padding-bottom:200px;
     padding-top:200px;
@@ -119,3 +123,22 @@
 .footer-12 {
   letter-spacing: initial;
 }
+
+.content-5
+{
+  padding-top: 90px;
+  .features > [class*="col-sm-"] > [class*="fui-"]
+  {
+    left: -65px;
+    img {
+      height:60px;
+      width:60px;
+    }
+  }
+  .feature-image
+  {
+    text-align:center;
+  }
+}
+
+

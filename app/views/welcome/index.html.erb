@@ -8,10 +8,10 @@
                 <div class="col-sm-6">
                     <div class="hero-unit">
                         <h1>Image it, <br> Learn to Code, <br> Create it!</h1>
-                        <p class="lead">Lorem ipsum, ipsum crek hore hope.</p>
+                        <p class="lead">We go to your school and teach kids coding.</p>
                     </div>
                     <div class="btns">
-                      <a class="btn btn-info" href="#How">Learn How =></a>
+                      <a class="btn btn-info" href="#How">Learn How <span class="glyphicon glyphicon-play"> </span></a>
                     </div>
                 </div>
             </div>
@@ -21,22 +21,24 @@
 
     <section class="content-5" id="How">
         <div class="container">
-          <%= image_tag("common-files/icons/magic-wand@2x.png", size:"200", alt:"Links to our Mission") %>
+          <div class="feature-image" >
+            <%= image_tag("long-arms-robot.png", class:"feature-image", style:"position:relative;") %>
+          </div>
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
-                    <h3>How we create creators?</h3>
+                    <h3>How we create creators?  <a class="feature-image btn btn-info" href="javascript:;"><span class="feature-image glyphicon glyphicon-play"></span></a></h3>
                     <p class="lead">We are a group of technologists and educators that teach children computer coding to develop problem solving and critical thinking skills. Coding empowers students and gives them tools to express themselves in very creative ways.</p>
                 </div>
             </div>
             <div class="row features">
                 <div class="col-sm-4 col-sm-offset-2">
-                    <span class="fui-cmd"> </span>
+                  <span class="fui-"><%= image_tag("bracket-code-icon.png") %> </span>
                     <h6>Afterschool Programs</h6>
                     <p>Let us come to your school! We provide the instructors, the technology and interactive content; all the schools need to provide is the learning space and the students eager to learn and create.</p>
                   <%= link_to("Learn More","#", class: "feature link") %>
                 </div>
                 <div class="col-sm-4 col-sm-offset-1">
-                    <span class="fui-windows"> </span>
+                    <span class="fui-"><%= image_tag("browser-finger-icon.png") %> </span>
                     <h6>Summer Camps</h6>
                     <p>Summer camps designed for girls and boys between the ages of 7 and 13. These kids will come out wanting to become builders and makers of technology. Week long and full day sessions available.</p>
                   <%= link_to("Learn More","#", class: "feature link") %>
@@ -44,13 +46,14 @@
             </div>
             <div class="row features">
                 <div class="col-sm-4 col-sm-offset-2">
-                    <span class="fui-upload"> </span>
+                  <span class="fui-"><%= image_tag("browser-icon.png") %> </span>
                     <h6>Hour of Code</h6>
                     <p>The Hour of Code is a one-hour introduction to computer science workshop, designed to expose kids to coding and show that anybody can learn the basics. This will take place December 7 - 13 in celebration of Computer Science Education Week. Join us, it’s free!</p>
                   <%= link_to("Learn More","#hourofcode",class: "feature link") %>
                 </div>
                 <div class="col-sm-4 col-sm-offset-1">
-                    <span class="fui-credit-card"> </span>
+<!--                     <span class="fui-"><%= image_tag("bracket-code-icon.png") %> </span> -->
+                  <span class="fui-"><%= image_tag("cloud-icon.png") %> </span>
                     <h6>Weekend Camps</h6>
                     <p>In 2016 we’re offering weekend camps. Bring your child Saturday and Sunday for an all day workshop focused on computer coding.</p>
                 </div>
@@ -66,18 +69,18 @@
         <div class="row features">
             <div class="col-sm-4">
                 <img src="<%= asset_path("common-files/icons/retina-ready-s@2x.png") %>" alt="" width="117" height="104">
-                <h6>Fun and Engaging</h6>
-                <p>We merge the best guides to teach children how to solve problem while learning computer coding. It's always fun!</p>
+                <h6>About Us</h6>
+                <p>We are a team of husband and wife who share the passion for technology and education. Together we are creating opportunities for kids to learn computer coding, a new type of literacy that will be very necessary in their future</p>
             </div>
             <div class="col-sm-4">
                 <img src="<%= asset_path("common-files/icons/clock@2x.png") %>" alt="" width="104" height="104">
-                <h6>Common Interests</h6>
-                <p>We plan activities around common interests to make sure learnings are aquired and also applied in future sessions.</p>
+                <h6>Our Mission</h6>
+                <p>We have the mission to lead youth in becoming passionate builders - not just consumers - of technology by learning computer coding and technical skills in a hands-on, social, and collaborative way.</p>
             </div>
             <div class="col-sm-4">
                 <img src="<%= asset_path("common-files/icons/rocket@2x.png") %>" alt="" width="101" height="101">
-                <h6>Industry Experience</h6>
-                <p>We know the technology and educational industry and we can bring it all together in a fun and egaging manner.</p>
+                <h6>What's different?</h6>
+                <p>Our varied curriculum teaches computer coding using different resources. We have a welcoming environment where beginners of all backgrounds can come together to learn essential 21st century technical skills.</p>
             </div>
         </div>
         </div>
