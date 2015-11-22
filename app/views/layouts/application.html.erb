@@ -14,6 +14,11 @@
   <%= render "layouts/analyticstracking" %>
         <header class="header-20 navbar-fixed-top" id="top" role="navigation">
             <div class="container">
+            <% flash.each do |message_type, message| %>
+            <div class="container main-error">
+                <div class="alert alert-<%= message_type %>"><%= message %></div>
+            </div>
+            <% end %>
                 <div class="row">
                     <div class="navbar col-sm-12" role="navigation">
                         <div class="navbar-header">
@@ -30,12 +35,6 @@
             </div>
             <div class="header-background"></div>
         </header>
-
-    <% flash.each do |message_type, message| %>
-    <div class="container">
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-    </div>
-    <% end %>
 
     <%= yield %>
 

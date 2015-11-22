@@ -14,10 +14,11 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'less-rails', '~> 2.7.0'
 gem 'therubyracer', platforms: :ruby
 
-gem 'rest-client'
+#gem 'rest-client'
 
 gem 'mailgun_rails'
-#gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
+
+# active_link_to gem helps to show the active page with active classes in the styles. 
 gem 'active_link_to'
 
 
@@ -60,3 +61,5 @@ group :test do
     gem 'minitest-reporters', '1.0.5'
     gem 'mini_backtrace', '0.1.3'
 end
+
+gem 'logglier', '~> 0.2.11'

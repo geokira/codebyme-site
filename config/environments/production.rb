@@ -53,7 +53,8 @@ Rails.application.configure do
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-
+    require 'logglier' 
+    config.logger = Logglier.new("https://logs-01.loggly.com/inputs/6d11e575-e135-4fed-95d5-5cb7a78dd3bf/tag/ruby/", :threaded => true)
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
