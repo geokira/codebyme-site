@@ -62,4 +62,3 @@ group :test do
     gem 'mini_backtrace', '0.1.3'
 end
 
-gem 'logglier', '~> 0.2.11'
