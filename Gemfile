@@ -62,3 +62,4 @@ group :test do
     gem 'mini_backtrace', '0.1.3'
 end
 
+gem 'newrelic_rpm'
