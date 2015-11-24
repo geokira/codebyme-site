@@ -18,7 +18,7 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'mailgun_rails'
 
-# active_link_to gem helps to show the active page with active classes in the styles. 
+# active_link_to gem helps to show the active page with active classes in the styles.
 gem 'active_link_to'
 
 
@@ -63,3 +63,7 @@ group :test do
 end
 
 gem 'newrelic_rpm'
+
+#during console run ap ModelObject.first to see ap at work
+gem "awesome_print", require:"ap"
+

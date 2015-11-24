@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module CodebymeSite
   class Application < Rails::Application
+
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -33,6 +35,6 @@ module CodebymeSite
     config.assets.paths << Rails.root.join("app/assets/startup-framework/common-files/css/")
     config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/bootstrap/css/")
     config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/css/")
-    config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/fonts/")      
+    config.assets.paths << Rails.root.join("app/assets/startup-framework/flat-ui/fonts/")
   end
 end
