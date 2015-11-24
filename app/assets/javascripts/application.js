@@ -11,7 +11,7 @@
 // about supported directives.
 //
 
-//= require jquery-1.10.2.min
+//= require jquery-2.0.3.min
 //= require bootstrap.min
 //= require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
@@ -22,7 +22,6 @@
 //= require jquery.parallax.min
 //= require startup-kit
 //= require jquery.backgroundvideo.min
-// require jquery2
 // require jquery_ujs
 // require turbolinks
 // require startup-framework.js
