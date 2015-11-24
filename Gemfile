@@ -67,3 +67,5 @@ gem 'newrelic_rpm'
 #during console run ap ModelObject.first to see ap at work
 gem "awesome_print", require:"ap"
 
+gem "puma"
+
