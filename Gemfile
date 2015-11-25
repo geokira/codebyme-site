@@ -68,4 +68,4 @@ gem 'newrelic_rpm'
 gem "awesome_print", require:"ap"
 
 gem "puma"
-
+gem 'xml-sitemap'
