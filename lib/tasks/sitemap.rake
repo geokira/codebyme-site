@@ -11,11 +11,15 @@ namespace :sitemap do
     
     private
     
-    def render(map, file_to_render='')
-        map.render_to(file_to_render, :gzip => true)
-        show_render(file_to_render)
-        map.render_to(file_to_render)
-    end
+  # Renders sitempa.xml and sitemap.xml.gzip to the public directory. 
+  # 
+  # map - XmlSitemap::Map object (required)
+  # file_to_render - filename of the sitemap that will be created. (default: public/sitemap.xml)
+  def render(map, file_to_render='public/sitemap.xml')
+       map.render_to(file_to_render, :gzip => true)
+       show_render(file_to_render)
+       map.render_to(file_to_render)
+  end
     
     def add_page(obj, path_string='')
         obj.add path_string

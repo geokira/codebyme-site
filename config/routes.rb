@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     get 'welcome/faq'
     
     resources :leads, only: [:create]
+  
+  get 'sitemap.xml' => 'sitemap#sitemap'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
