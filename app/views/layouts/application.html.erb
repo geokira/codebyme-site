@@ -8,7 +8,6 @@
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
 </head>
 <body>
   <%= render "layouts/analyticstracking" %>
@@ -25,12 +24,21 @@
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle"></button>
                              <%= link_to(image_tag(asset_path("20151010 - codebyme logo.png"), size: "230x132", alt: "Code by Me"), root_path, class: "brand") %>
+                          <div class="navbar brand">
+                      <a id="socialpopover" tabindex="0" class="btn btn-sm navbar-btn" role="button"  data-placement="bottom"
+                               data-html="true" title="Social Options">
+                              <div role="navigation" class="fui-facebook navbar-btn"></div>
+                                </a>
+                      </div>
                         </div>
+
                         <div class="navbar-collapse collapse pull-right">
                             <ul class="nav">
                               <%= render "shared/nav_links" %>
                             </ul>
-                            <div class="fb-like" data-share="true" data-width="450" data-layout="standard" data-action="like" data-show-faces="false"></div>
+                          <!-- The content below is the facebook like icon - to be shown as a popover -->
+                          <div id="popoverHiddenContent" style="display: none" class='fb-like' data-layout='button' data-action='like' data-show-faces='false' data-share='false'></div>
+
                         </div>
                     </div>
                 </div>
